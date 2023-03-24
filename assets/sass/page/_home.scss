@@ -23,6 +23,9 @@
 }
 .hero_main {
 	padding: 17.7rem 0 11.2rem 0;
+	@include bp($point_2) {
+		padding: 3rem 0 6rem 0;
+	}
 }
 .hero_main_txt {
 	max-width: 80rem;
@@ -33,6 +36,20 @@
 	}
 	p {
 		color: $white;
+	}
+	@include bp($point_5) {
+		text-align: center;
+		margin-bottom: 3rem;
+		h1 {
+			line-height: 3.3rem;
+			font-size: 2rem;
+		}
+		p {
+			font-size: 1.4rem;
+		}
+		br {
+			display: none;
+		}
 	}
 }
 .hero_main_btn {
@@ -46,6 +63,16 @@
 		&:hover {
 			background: $gold;
 			box-shadow: 0 1.9rem 6rem rgba(255, 222, 89, 0.3);
+		}
+	}
+	@include bp($point_2) {
+		margin: 0;
+	}
+	@include bp($point_5) {
+		display: flex;
+		justify-content: center;
+		button {
+			font-size: 1.4rem;
 		}
 	}
 }
@@ -72,6 +99,9 @@
 		top: 50%;
 		left: 0;
 	}
+	@include bp($point_2) {
+		display: none;
+	}
 }
 .hero_social_wh {
 }
@@ -83,9 +113,16 @@
 }
 .project_main {
 	padding: 11.7rem 0 0 0;
+	@include bp($point_2) {
+		padding: 4rem 0 0 0;
+	}
 }
 .project_head {
 	margin-bottom: 6rem;
+	@include bp($point_5) {
+		margin-bottom: 3rem;
+		text-align: center;
+	}
 }
 .project_list {
 	ul {
@@ -94,6 +131,13 @@
 		grid-gap: 6rem 3rem;
 	}
 	margin-bottom: 6rem;
+	@include bp($point_5) {
+		margin-bottom: 3rem;
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+			grid-gap: 3rem;
+		}
+	}
 }
 .project_list_img {
 	position: relative;
@@ -107,7 +151,6 @@
 			visibility: visible;
 		}
 	}
-
 	&:before, span {
 		opacity: 0;
 		visibility: hidden;
@@ -135,6 +178,9 @@
 			border-radius: 1rem;
 		}
 	}
+	@include bp($point_5) {
+		margin-bottom: 1rem;
+	}
 }
 .project_list_txt {
 	p {
@@ -144,6 +190,9 @@
 	}
 	span {
 		color: rgba(27, 27, 27, 0.8);
+	}
+	@include bp($point_5) {
+		text-align: center;
 	}
 }
 .project_btn {
@@ -182,6 +231,11 @@
 		background: url('../../i/saleleft.png') center/cover no-repeat;
 		z-index: 1;
 	}
+	@include bp($point_5) {
+		&:after {
+			display: none;
+		}
+	}
 }
 .sale_main {
 	margin: 18rem 0 0 0;
@@ -196,11 +250,27 @@
 		background: url('../../i/bgsale1.png') center/cover no-repeat;
 		z-index: 2;
 	}
+	@include bp($point_2) {
+		&:before {
+			right: 42%;
+			width: 11rem;
+			height: 66.79rem;	
+		}	
+	}
+	@include bp($point_5) {
+		margin: 6rem 0 0 0;
+		&::before {
+			display: none;
+		}
+	} 
 }
 .sale_main_left {
 }
 .sale_main_right {
 	padding: 6.6rem 0 12.7rem 6.4rem;
+	@include bp($point_5) {
+		padding: 4rem 0;
+	}
 }
 .sale_head {
 	margin-bottom: 5rem;
@@ -210,6 +280,16 @@
 	}
 	p {
 		color: $white;
+	}
+	@include bp($point_5) {
+		text-align: left;
+		P {
+			max-width: 35rem;
+			font-size: 1.4rem;
+		}
+		br {
+			display: none;
+		}
 	}
 }
 .sale_main_form {
@@ -231,10 +311,18 @@
 			color: $white;
 		}
 	}
+	@include bp($point_2) {
+		input {
+			width: 93%;
+		}
+	}
 }
 .sale_main_form_bottom {
 	display: flex;
 	align-items: center;
+	@include bp($point_2) {
+		flex-direction: column;
+	}
 }
 .sale_form_btn {
 	margin-right: 2.5rem;
@@ -247,6 +335,13 @@
 		&:hover {
 			background: $gold;
 			box-shadow: 0 1.9rem 6rem rgba(255, 222, 89, 0.3);
+		}
+	}
+	@include bp($point_2) {
+		margin-bottom: 2rem;
+		button {
+			width: 100%;
+			padding: 2.2rem 12rem;
 		}
 	}
 }
@@ -262,11 +357,17 @@
 }
 .advantages_main {
 	padding: 18rem 0 0 0;
+	@include bp($point_2) {
+		padding: 6rem 0 0 0;
+	}
 }
 .advantages_head {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 13rem;
+	@include bp($point_2) {
+		margin-bottom: 4rem;
+	}
 }
 .advantages_content {
 	ul {
@@ -281,6 +382,18 @@
 		text-align: center;
 		max-width: 35rem;
 	}
+	@include bp($point_2) {
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(21%, 1fr));
+			grid-gap: 5rem 6rem;
+		}
+	} 
+	@include bp($point_5) {
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+			grid-gap: 5rem 6rem;
+	}
+		}
 }
 .advantages_content_img {
 	background: rgba(255, 222, 89, 0.2);
@@ -292,12 +405,28 @@
 		width: 3.2rem;
 		margin: 2.2rem;
 	}
+	@include bp($point_5) {
+		margin-bottom: 1rem;
+	}
 }
 .advantages_content_txt {
 	p {
 		margin-bottom: 2rem;
 		font-family: $font_3;
 		font-size: 2.3rem;
+	}
+	@include bp($point_2) {
+		p {
+			font-size: 1.6rem;
+		}
+		span {
+			font-size: 1.6rem;
+		}
+	}
+	@include bp($point_5) {
+		p {
+			margin-bottom: 1rem;
+		}
 	}
 }
 .company {
@@ -306,8 +435,13 @@
 	padding: 18rem 0 0 0;
 	display: flex;
 	justify-content: space-between;
+	@include bp($point_2) {
+		padding: 6rem 0 0 0;
+		justify-content: center;
+	}
 }
 .company_main_left {
+	text-align: center;
 }
 .company_head {
 	margin-bottom: 3rem;
@@ -319,6 +453,9 @@
 		&:not(:last-child) {
 				margin-bottom: 2rem;
 		}
+	}
+	@include bp($point_2) {
+		max-width: 100rem;
 	}
 }
 .company_btn {
@@ -335,6 +472,9 @@
 	}
 }
 .company_main_right {
+	@include bp($point_2) {
+		display: none;
+	}
 }
 .stages {
 	position: relative;
@@ -373,6 +513,13 @@
 .stages_main {
 	margin: 18rem 0 0 0;
 	padding: 15rem 0 16.8rem 0;
+	@include bp($point_2) {
+		margin: 6rem 0 0 0;
+	}
+	@include bp($point_5) {
+		margin: 6rem 0 0 0;
+		padding: 14rem 0 10rem 0;
+	}
 }
 .stages_main_head {
 	display: flex;
@@ -380,6 +527,9 @@
 	margin-bottom: 15.4rem;
 	h2 {
 		color: $white;
+	}
+	@include bp($point_5) {
+		margin-bottom: 5rem;
 	}
 }
 .stages_main_content {
@@ -392,7 +542,7 @@
 	li {
 		position: relative;
 		counter-increment: item;
-		&::before {
+		&:before {
 			position: absolute;
 			content: "0" counter(item);
 			bottom: 40%;
@@ -404,6 +554,16 @@
 			line-height: 18.2rem;
 		}
 	}
+	@include bp($point_2) {
+		ul {
+			grid-gap: 10rem 4rem;
+		}
+		li {
+			&:before {
+				left: -4%;
+			}
+		}
+	} 
 }
 .stages_main_txt {
 	max-width: 33rem;
@@ -412,16 +572,34 @@
 		font-family: $font_3;
 		margin-bottom: 2rem;
 	}
+	@include bp($point_5) {
+		p {
+			font-size: 1.6rem;
+			margin-bottom: 1rem;
+		}
+		span {
+			font-size: 1.6rem;
+		}
+	}
 }
 .answers {
 }
 .answers_main {
 	padding: 18rem 0 0 0;
+	@include bp($point_2) {
+		padding: 4rem 0 0 0;
+	}
+	@include bp($point_5) {
+		padding: 0;
+	}
 }
 .answers_head {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 8rem;
+	@include bp($point_2) {
+		margin-bottom: 4rem;
+	}
 }
 .answers_main_info {
 	li {
@@ -458,13 +636,22 @@
 		font-family: $font_1;
 		font-size: 2rem;
 	}
+	@include bp($point_5) {
+		h4 {
+			font-size: 1.6rem;
+		}
+	}
 }
 .answers_btn {
 }
 .answers_item_bottom {
 	max-width: 117rem;
 	padding: 3rem 0 0 3rem;
-
+	@include bp($point_5) {
+		P {
+			font-size: 1.6rem;
+		}
+	}
 }
 .consultation {
 	margin: 18rem 0 0 0;
@@ -488,9 +675,11 @@
 		background: url('../../i/consultationRight.png') center/cover no-repeat;
 		z-index: 1;
 	}
+	@include bp($point_5) {
+		
+	}
 }
 .consultation_main_w {
-
 }
 .consultation_main {
 	display: flex;
@@ -505,6 +694,12 @@
 		background: url('../../i/bgsale1.png') center/cover no-repeat;
 		z-index: 2;
 	}
+	@include bp($point_2) {
+		&:before {
+			height: 67rem;
+			right: 43%;
+		}
+	}
 }
 .consultation_main_left {
 	padding: 6.6rem 0 12.7rem 0;
@@ -518,6 +713,9 @@
 	}
 	p {
 		color: $white;
+	}
+	@include bp($point_2) {
+		max-width: 47rem;
 	}
 }
 .consultation_main_form {
@@ -539,10 +737,19 @@
 			color: $white;
 		}
 	}
+	@include bp($point_2) {
+		input {
+			width: 70%;
+		}
+	}
 }
 .consultation_form_bottom {
 	display: flex;
 	align-items: center;
+	@include bp($point_2) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 }
 .consultation_form_btn {
 	margin-right: 2.5rem;
@@ -555,6 +762,12 @@
 		&:hover {
 			background: $gold;
 			box-shadow: 0 1.9rem 6rem rgba(255, 222, 89, 0.3);
+		}
+	}
+	@include bp($point_2) {
+		margin-bottom: 2rem;
+		button {
+			padding: 2.2rem 16rem;
 		}
 	}
 }
@@ -572,6 +785,9 @@
 }
 .reviews_main {
 	padding: 18rem 0 0 0;
+	@include bp($point_2) {
+		padding: 6rem 0 0 0;
+	}
 }
 .reviews_head {
 	display: flex;
@@ -606,6 +822,11 @@
 }
 .reviews_slider_w {
 	padding-bottom: 18rem;
+	@include bp($point_2) {
+		padding-bottom: 6rem;@include bp($point_2) {
+			margin: 0;
+		}
+	}
 }
 .reviews_slider {
 }
@@ -619,6 +840,9 @@
 	border: .1rem solid rgba(27, 27, 27, 0.3);
 	border-radius: 1rem;
 	padding: 3rem;
+	@include bp($point_2) {
+		padding: 2rem;
+	}
 }
 .reviews_slide_head{
 	margin-bottom: 1rem;
@@ -632,6 +856,9 @@
 	p {
 		font-family: $font_1;
 		color: $darkyellow;
+	}
+	@include bp($point_2) {
+		margin-bottom: 1.5rem;
 	}
 }
 .reviews_slide_txt {
@@ -706,27 +933,54 @@
 	ul {
 		display: flex;
 		align-items: center;
-		height: 4.5rem;
-	}
-	li {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: $white;
-		width: 10%;
-		height: 100%;
-		padding: 1rem;
-		border-radius: 1rem;
-		&:not(:last-child) {
-			margin-right: 1.5rem;
-		}
 	}
 }
 .contact_wh {
+	a {
+		background: $white;
+		width: 4.5rem;
+		height: 4.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1.2rem 1.3rem 1.2rem 1.1rem;
+		border-radius: 1rem;
+		margin-right: 1.5rem;
+		img {
+			width: 2.4rem;
+		}
+	}
 }
 .contact_vk {
+	a {
+		background: $white;
+		width: 4.5rem;
+		height: 4.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1.4rem .8rem 1.4rem .7rem;
+		border-radius: 1rem;
+		margin-right: 1.5rem;
+		img {
+			width: 2.4rem;
+		}
+	}
 }
 .contact_tg {
+	a {
+		background: $white;
+		width: 4.5rem;
+		height: 4.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1.1rem 1.1rem 1rem 1rem;
+		border-radius: 1rem;
+		img {
+			width: 2.4rem;
+		}
+	}
 }
 .contact_main_right {
 }
