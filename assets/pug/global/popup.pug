@@ -1,0 +1,85 @@
+.popup.popup_submit(data-id="form")
+	.popup_form_bg.close_popups.remove
+	.popup_form_w
+		.popup_close.close_popups.remove 
+			button(type="button")
+				+icon('close')
+		.popup_form_head 
+			h3 Оставьте заявку
+			p Оставьте заявку, и мы свяжемся с вами в ближайшее время, чтобы обсудить все условия.
+		form.popup_form
+			.popup_form_input
+				input(type="text" placeholder="Ваше имя")
+			.popup_form_input
+				input(type="tel" placeholder="Ваш номер телефона")
+			.popup_form_bottom
+				.popup_form_btn 
+					button(type="submit") Отправить
+				.popup_policy!='Отправляя форму, вы соглашаетесь с <a href="#"> политикой конфиденциальности</a>.'
+
+
+
+.popup.popup_menu(data-id="menu")
+	.popup_form_bg_m.close_popups.remove 
+	.popup_form_m
+		.popup_close_m.close_popups.remove 
+			button(type="button")
+				+icon('close')
+		.popup_menu_head 
+			.popup_logo 
+				a(href="#")
+					img(src="i/logo.svg", alt="")
+		.popup_menu 
+			ul
+				each item in ['Проекты', 'Преимущества', 'О нас', 'Этапы работы', 'FAQ', 'Отзывы', 'Контакты']
+					li.remove
+						a(href="#")=item 
+		.popup_social 
+			ul 
+				li
+					.popup_social_wh
+						a(href="#")
+							img(src="i/icons/watop.svg", alt="") 
+				li
+					.popup_social_vk 
+						a(href="#")
+							img(src="i/icons/vktop.svg", alt="") 
+				li
+					.popup_social_tg 
+						a(href="#")
+							img(src="i/icons/tgtop.svg", alt="") 
+		.popup_tel.remove
+			a(href="#")
+				p  +7 (927) 466-33-39
+
+
+
+
+.popup.popup_project(data-id="project")
+	.popup_form_bg.close_popups.remove
+	.popup_form_p
+		.popup_close.close_popups.remove 
+			button(type="button")
+				+icon('close') 
+		.popup_form_content_w
+			.popup_form_content
+				.popup_form_left 
+					.popup_slider_nav 
+							.popup_slider_btn_prewios 
+								button(type="button")
+									+icon('previous')
+							.popup_slider_btn_next 
+								button(type="button")
+									+icon('next')
+					.popup_slider_w
+						.popup_slider.swiperPr 
+							.swiper-wrapper
+								-for(i = 0; i < 8; i++)
+									.swiper-slide 
+										.popup_slide
+											img(src="i/project/project1.png", alt="")
+				.popup_form_right
+					.popup_form_head 
+						h2 Название кухни
+					.popup_form_txt 
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

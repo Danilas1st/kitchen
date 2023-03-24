@@ -3,8 +3,16 @@
 .section_in {
 }
 .footer_main {
+	display: flex;
+	align-items: center;
+	padding-top: 3rem;
 }
 .footer_copyright {
+	margin-right: 38.5rem;
+	color: $white;
 }
 .footer_policy {
+	a {
+		color: $white;
+	}
 }

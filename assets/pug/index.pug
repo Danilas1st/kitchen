@@ -10,7 +10,7 @@ block content_block
 					h1 СОЗДАЕМ КУХНИ <br> ПО ВАШИМ ПОЖЕЛАНИЯМ
 					p Замер, сборка, доставка и установка всегда по Казани БЕСПЛАТНО! <br>Используем качественные материалы и фурнитуру, что гарантирует вам мебели.
 				.hero_main_btn 
-					button(type="button") Оставить заявку
+					button(type="button" data-target="form" class="trigger") Оставить заявку
 				.hero_main_social 
 					ul 
 						li
@@ -34,7 +34,7 @@ block content_block
 					ul
 						- for (var i = 0; i < 6; i++)
 							li 
-								.project_list_img 
+								.project_list_img(data-target="project" class="trigger") 
 									img(src="i/project/project1.png", alt="")
 									span Подробнее
 								.project_list_txt 
@@ -50,7 +50,7 @@ block content_block
 				.sale_main_right
 					.sale_head 
 						h2 Акция! 20% скидка на кухни
-						p Оставьте заявку, и мы свяжемся с вами в ближайшее время, чтобы обсудить все условия. 
+						p Оставьте заявку, и мы свяжемся с вами в ближайшее <br>время, чтобы обсудить все условия. 
 					.sale_main_form
 						form.sale_form
 						.sale_form_input
@@ -114,40 +114,41 @@ block content_block
 						p В ассортименте компании «А:S КУХНИ» вы найдете именно ту продукцию, которая вам нужна, причем высшего качества и по справедливой цене. За годы присутствия на рынке мы накопили обширный опыт, который помогает внимательно и эффективно обслуживать клиентов, заботясь о том, чтобы им все нравилось.
 						p Обращаясь к нам, вы всегда можете рассчитывать на высокое качество продукции и первоклассный сервис на всех этапах взаимодействия независимо от того, покупаете вы дорогую кухню или всего одно изделие. Ознакомьтесь с нашими ассортиментом. Свяжитесь с нами, если вам нужна помощь в поиске конкретного продукта.
 					.company_btn 
-						button(type="button") Оставить заявку
+						button(type="button" data-target="form" class="trigger") Оставить заявку
 				.company_main_right 
 					img(src="i/company/company1.png", alt="")
 	section.stages
 		.section_in
-			.stages_main 
-				.stages_main_head 
-					h2 ЭТАПЫ РАБОТЫ
-				.stages_main_content 
-					ul
-						li 
-							.stages_main_txt 
-								p Замер кухни
-								span Замер помогает учесть такие нюансы, как выступы, батареи, трубы. Замер площади.
-						li 
-							.stages_main_txt 
-								p Дизайн
-								span Создаем дизайн, выбираем стиль. Определяем размещение техники.
-						li 
-							.stages_main_txt 
-								p Цвет, фурнитура
-								span Выбираем цветовую гамму и фурнитуру.
-						li 
-							.stages_main_txt 
-								p 3D проект
-								span Готовый 3D проект передается клиенту на утверждение.
-						li 
-							.stages_main_txt 
-								p Реализация
-								span Изготовление кухни.
-						li
-							.stages_main_txt 
-								p Доставка
-								span Доставка, сборка и установка кухни.
+			.stages_main_w 
+				.stages_main
+					.stages_main_head 
+						h2 ЭТАПЫ РАБОТЫ
+					.stages_main_content 
+						ul
+							li 
+								.stages_main_txt 
+									p Замер кухни
+									span Замер помогает учесть такие нюансы, как выступы, батареи, трубы. Замер площади.
+							li 
+								.stages_main_txt 
+									p Дизайн
+									span Создаем дизайн, выбираем стиль. Определяем размещение техники.
+							li 
+								.stages_main_txt 
+									p Цвет, фурнитура
+									span Выбираем цветовую гамму и фурнитуру.
+							li 
+								.stages_main_txt 
+									p 3D проект
+									span Готовый 3D проект передается клиенту на утверждение.
+							li 
+								.stages_main_txt 
+									p Реализация
+									span Изготовление кухни.
+							li
+								.stages_main_txt 
+									p Доставка
+									span Доставка, сборка и установка кухни.
 	section.answers
 		.section_in 
 			.answers_main
@@ -161,48 +162,56 @@ block content_block
 									h4 Lorem ipsum dolor sit amet, consectetur adipiscing
 									.answers_btn
 										button(type="button")
-											img(src="i/icons/arrowbottom.svg", alt="") 
-								.qanswers_item_bottom
+											+icon('arrowbottom')
+								.answers_item_bottom
 									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
 	section.consultation
 		.section_in 
-			.consultation_main
-				.consultation_main_left 
-					.consultation_head 
-						h2 Бесплатная консультация
-						p Оставьте заявку, и мы свяжемся с вами в ближайшее время, чтобы обсудить все условия. 
-					.consultation_main_form
-						form.consultation_form
-						.consultation_form_input
-							input(type="text" placeholder="Ваше имя")
-						.consultation_form_input
-							input(type="tel" placeholder="Ваш телефон")
-						.consultation_form_btn 
-							button(type="submit") Отправить
-						.consultation_policy!='Отправляя форму, вы соглашаетесь с <a href="#"> политикой конфиденциальности.</a>'
-				.consultation_main_right 
-					img(src="i/consultationRight.png", alt="")
+			.consultation_main_w
+				.consultation_main
+					.consultation_main_left 
+						.consultation_head 
+							h2 Бесплатная консультация
+							p Оставьте заявку, и мы свяжемся с вами в ближайшее время, чтобы обсудить все условия. 
+						.consultation_main_form
+							form.consultation_form
+							.consultation_form_input
+								input(type="text" placeholder="Ваше имя")
+							.consultation_form_input
+								input(type="tel" placeholder="Ваш телефон")
+							.consultation_form_bottom
+								.consultation_form_btn 
+									button(type="submit") Отправить
+								.consultation_policy!='Отправляя форму, вы соглашаетесь с <a href="#"> политикой конфиденциальности.</a>'
+					.consultation_main_right 
+						img(src="i/consultationRight.png", alt="")
 	section.reviews
 		.section_in 
 			.reviews_main 
 				.reviews_head 
 					h2 ОТЗЫВЫ КЛИЕНТОВ
-				.reviews_slider_nav 
-					.reviews_slider_btn_prewios 
-						button(type="button")
-							+icon('previous')
-					.reviews_slider_btn_next 
-						button(type="button")
-							+icon('next')
+					.reviews_slider_nav 
+						.reviews_slider_btn_prewios 
+							button(type="button")
+								+icon('previous')
+						.reviews_slider_btn_next 
+							button(type="button")
+								+icon('next')
 			.reviews_slider_w
 				.reviews_slider.swiper 
 					.swiper-wrapper
 						-for(i = 0; i < 8; i++)
 							.swiper-slide 
 								.reviews_slide
-									h3 Имя Фамилия
-									span 13.03.2023
-									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									.reviews_slide_head
+										h3 Имя Фамилия
+									.reviews_slide_date 
+										p 13.03.2023
+									.reviews_slide_txt
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									.reviews_btn_more 
+										button(type="button") Показать больше
+											+icon('arrowbottom')
 	section.contact 
 		.section_in 
 			.contact_main 

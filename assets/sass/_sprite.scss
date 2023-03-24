@@ -5,6 +5,10 @@
 	fill: currentColor;
 }
 
+.icon-arrowbottom {
+	font-size:calc(11/10)*1rem;
+	width:calc(19/11)*1em;
+}
 .icon-brush {
 	font-size:calc(30/10)*1rem;
 	width:calc(30/30)*1em;
@@ -37,9 +41,17 @@
 	font-size:calc(32/10)*1rem;
 	width:calc(32/32)*1em;
 }
+.icon-next {
+	font-size:calc(19/10)*1rem;
+	width:calc(11/19)*1em;
+}
 .icon-ok {
 	font-size:calc(29/10)*1rem;
 	width:calc(34/29)*1em;
+}
+.icon-previous {
+	font-size:calc(19/10)*1rem;
+	width:calc(11/19)*1em;
 }
 .icon-tgbottom {
 	font-size:calc(24/10)*1rem;
