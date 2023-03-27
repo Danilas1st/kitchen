@@ -65,19 +65,20 @@
 			.popup_form_content
 				.popup_form_left 
 					.popup_slider_nav 
-							.popup_slider_btn_prewios 
-								button(type="button")
-									+icon('previous')
-							.popup_slider_btn_next 
-								button(type="button")
-									+icon('next')
+						.popup_slider_btn_prewios 
+							button(type="button")
+								+icon('previous')
+						.popup_slider_btn_next 
+							button(type="button")
+								+icon('next')
 					.popup_slider_w
-						.popup_slider.swiperPr 
+						.popup_slider.swiperPopup  
 							.swiper-wrapper
 								-for(i = 0; i < 8; i++)
 									.swiper-slide 
 										.popup_slide
-											img(src="i/project/project1.png", alt="")
+											a(href="i/project/project1.png")
+												img(src="i/project/project1.png", alt="")
 				.popup_form_right
 					.popup_form_head 
 						h2 Название кухни

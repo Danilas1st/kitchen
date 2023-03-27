@@ -40,6 +40,10 @@
 	padding: 4rem;
 	max-width: 53rem;
 	align-items: center;
+	@include bp($point_5) {
+		max-width: 35rem;
+		padding: 2rem;
+	}
 }
 .popup_close {
 	position: absolute;
@@ -130,6 +134,10 @@
 	height: 100%;
 	background: $white;
 	padding: 4rem 0 0 2rem;
+	@include bp($point_5) {
+		width: 100%;
+		overflow: auto;
+	}
 }
 .popup_close_m {
 	position: absolute;
@@ -219,6 +227,14 @@
 	max-width: 115.5rem;
 	padding: 4rem;
 	border-radius: 2rem;
+	@include bp($point_2) {
+		padding: 2rem;
+		max-width: 100rem;
+	}
+	@include bp($point_5) {
+		max-width: 35rem;
+		padding: 6rem 2rem 2rem 2rem;
+	} 
 }
 .popup_close {
 }
@@ -229,6 +245,9 @@
 .popup_form_content {
 	display: flex;
 	justify-content: space-between;
+	@include bp($point_5) {
+		flex-direction: column;
+	}
 }
 .popup_form_left {
 	position: relative;
@@ -241,6 +260,9 @@
 	top: 50%;
 	transform: translateY(-50%);
 	left: 5%;
+	button {
+		color: rgba(255, 255, 255, 0.4);
+	}
 }
 .icon-previous {
 }
@@ -250,12 +272,23 @@
 	top: 50%;
 	transform: translateY(-50%);
 	right: 5%;
+	button {
+		color: rgba(255, 255, 255, 0.4);
+	}
+}
+.swiper-button-disabled {
+	button {
+		fill: #BB0000;
+	}
 }
 .icon-next {
 }
 .popup_slider_w {
+	width: 100%;
+	overflow: hidden;
 }
 .popup_slider {
+	max-width: 50rem;
 }
 .swiperPr {
 }
@@ -280,6 +313,10 @@
 	max-height: 26.4rem;
 	overflow-y: scroll;
 	padding: 0 3rem 0 4rem;
+	@include bp($point_5) {
+		padding: 0 2rem 0 0;
+		max-height: 15rem;
+	}
 }
 .popup_form_txt::-webkit-scrollbar-track
 {

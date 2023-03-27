@@ -24,7 +24,7 @@
 .hero_main {
 	padding: 17.7rem 0 11.2rem 0;
 	@include bp($point_2) {
-		padding: 3rem 0 6rem 0;
+		padding: 7rem 0 6rem 0;
 	}
 }
 .hero_main_txt {
@@ -231,6 +231,11 @@
 		background: url('../../i/saleleft.png') center/cover no-repeat;
 		z-index: 1;
 	}
+	@include bp($point_3) {
+		&:after {
+			left: -11.8rem;
+		}
+	}
 	@include bp($point_5) {
 		&:after {
 			display: none;
@@ -244,7 +249,7 @@
 		position: absolute;
 		content: '';
 		top: 0;
-		right: 49%;
+		right: 48%;
 		width: 9rem;
 		height: 61.4rem;
 		background: url('../../i/bgsale1.png') center/cover no-repeat;
@@ -257,6 +262,17 @@
 			height: 66.79rem;	
 		}	
 	}
+	@include bp($point_3) {
+		&:before {
+			right: 63%;
+			height: 66.89rem;
+		}
+	}
+	@include bp($point_4) {
+		&::before {
+			height: 66.79rem;
+		}
+	}
 	@include bp($point_5) {
 		margin: 6rem 0 0 0;
 		&::before {
@@ -265,9 +281,16 @@
 	} 
 }
 .sale_main_left {
+	display: none;
 }
 .sale_main_right {
-	padding: 6.6rem 0 12.7rem 6.4rem;
+	padding: 6.6rem 0 12.7rem 74.4rem;
+	@include bp($point_2) {
+		padding: 6.6rem 0 12.7rem 61.4rem;
+	}
+	@include bp($point_3) {
+		padding: 6.6rem 0 12.7rem 32.4rem;
+	}
 	@include bp($point_5) {
 		padding: 4rem 0;
 	}
@@ -280,6 +303,14 @@
 	}
 	p {
 		color: $white;
+	}
+	@include bp($point_2) {
+		br {
+			display: none;
+		}
+		p {
+			max-width: 30rem;
+		}
 	}
 	@include bp($point_5) {
 		text-align: left;
@@ -300,6 +331,7 @@
 	&:not(:last-child) {
 		margin-bottom: 2rem;
 	}
+	width: 100%;
 	input {
 		@include app;
 		color: $white;
@@ -313,7 +345,7 @@
 	}
 	@include bp($point_2) {
 		input {
-			width: 93%;
+			width: 100%;
 		}
 	}
 }
@@ -326,7 +358,9 @@
 }
 .sale_form_btn {
 	margin-right: 2.5rem;
+	width: 90%;
 	button {
+		width: 100%;
 		background: $yellow;
 		padding: 2.2rem 6rem;
 		border-radius: 1rem;
@@ -339,9 +373,16 @@
 	}
 	@include bp($point_2) {
 		margin-bottom: 2rem;
+		margin-right: 0;
+		width: 100%;
 		button {
 			width: 100%;
-			padding: 2.2rem 12rem;
+			padding: 2.2rem 6rem;
+		}
+	}
+	@include bp($point_3) {
+		button {
+			padding: 2.2rem 6rem;
 		}
 	}
 }
@@ -392,8 +433,11 @@
 		ul {
 			grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
 			grid-gap: 5rem 6rem;
-	}
 		}
+		li {
+			max-width: 50rem;
+		}
+	}
 }
 .advantages_content_img {
 	background: rgba(255, 222, 89, 0.2);
@@ -450,6 +494,7 @@
 	max-width: 56rem;
 	margin-bottom: 6rem;
 	p {
+		text-align: left;
 		&:not(:last-child) {
 				margin-bottom: 2rem;
 		}
@@ -472,6 +517,9 @@
 	}
 }
 .company_main_right {
+	img {
+		border-radius: 1rem;
+	}
 	@include bp($point_2) {
 		display: none;
 	}
@@ -676,7 +724,15 @@
 		z-index: 1;
 	}
 	@include bp($point_5) {
-		
+		margin: 6rem 0 0 0;
+		&:after {
+			display: none;
+		}
+	}
+	@include bp($point_3) {
+		&:after {
+			width: 38%;
+		}
 	}
 }
 .consultation_main_w {
@@ -693,6 +749,9 @@
 		rotate: 180deg;
 		background: url('../../i/bgsale1.png') center/cover no-repeat;
 		z-index: 2;
+		@include bp($point_5) {
+			display: none;
+		}
 	}
 	@include bp($point_2) {
 		&:before {
@@ -700,10 +759,18 @@
 			right: 43%;
 		}
 	}
+	@include bp($point_3) {
+		&:before {
+			right: 30%;
+		}
+	}
 }
 .consultation_main_left {
 	padding: 6.6rem 0 12.7rem 0;
 	max-width: 58rem;
+	@include bp($point_5) {
+		padding: 6rem 0;
+	}
 }
 .consultation_head {
 	margin-bottom: 5rem;
@@ -717,6 +784,12 @@
 	@include bp($point_2) {
 		max-width: 47rem;
 	}
+	@include bp($point_5) {
+		p {
+			font-size: 1.6rem;
+			max-width: 30rem;
+		}
+	} 
 }
 .consultation_main_form {
 }
@@ -726,6 +799,7 @@
 	&:not(:last-child) {
 		margin-bottom: 3rem;
 	}
+	width: 100%;
 	input {
 		@include app;
 		color: $white;
@@ -739,7 +813,17 @@
 	}
 	@include bp($point_2) {
 		input {
-			width: 70%;
+			width: 75%;
+		}
+		@include bp($point_3) {
+			input {
+				width: 65%;
+			}
+		}
+	}
+	@include bp($point_5) {
+		input {
+			width: 100%;
 		}
 	}
 }
@@ -753,7 +837,9 @@
 }
 .consultation_form_btn {
 	margin-right: 2.5rem;
+	width: 81%;
 	button {
+		width: 100%;
 		background: $yellow;
 		padding: 2.2rem 6rem;
 		border-radius: 1rem;
@@ -765,9 +851,24 @@
 		}
 	}
 	@include bp($point_2) {
+		width: 100%;
+		margin-right: 0;
 		margin-bottom: 2rem;
 		button {
-			padding: 2.2rem 16rem;
+			width: 75%;
+			padding: 2.2rem 6rem;
+		}
+	}
+	@include bp($point_3) {
+		button {
+			width: 65%;
+		}
+	}
+	@include bp($point_5) {
+		width: 100%;
+		button {
+			width: 100%;
+			padding: 2.2rem 6rem;
 		}
 	}
 }
@@ -776,6 +877,9 @@
 	a {
 		color: $white;
 		border-bottom: .1rem solid $white;
+	}
+	@include bp($point_5) {
+		font-size: 1.6rem;
 	}
 }
 .consultation_main_right {
@@ -794,9 +898,15 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 6rem;
+	@include bp($point_5) {
+		margin-bottom: 3rem;
+	}
 }
 .reviews_slider_nav {
 	display: flex;
+	@include bp($point_5) {
+		display: none;
+	}
 }
 .reviews_slider_btn_prewios {
 	margin-right: 5rem;
@@ -850,6 +960,11 @@
 		font-family: $font_3;
 		font-size: 2rem;
 	}
+	@include bp($point_5) {
+		h3 {
+			font-size: 1.6rem;
+		}
+	}
 }
 .reviews_slide_date {
 	margin-bottom: 3.1rem;
@@ -860,9 +975,22 @@
 	@include bp($point_2) {
 		margin-bottom: 1.5rem;
 	}
+	@include bp($point_5) {
+		p {
+			font-size: 1.4rem;
+		}
+	}
 }
 .reviews_slide_txt {
 	margin-bottom: 2rem;
+	@include bp($point_5) {
+		p {
+			font-size: 1.6rem;
+		}
+	}
+}
+.hidden-text {
+		display: none;
 }
 .reviews_btn_more {
 	button {
@@ -883,6 +1011,10 @@
 		height: calc(123% + $footer);
 		background: url('../../i/bgcontact.png') center/cover no-repeat;
 		z-index: -1;
+		@include bp($point_5) {
+			bottom: - 11.2rem;
+			height: calc(131% + $footer);
+		}
 	}
 }
 .contact_main {
@@ -890,8 +1022,17 @@
 	justify-content: space-between;
 	border-bottom: .1rem solid rgba(255, 255, 255, 0.4);
 	padding: 9.2rem 0 6rem 0;
+	@include bp($point_3) {
+		flex-direction: column;
+	}
+	@include bp($point_5) {
+		padding: 6rem 0;
+	}
 }
 .contact_main_left {
+	@include bp($point_3) {
+		margin-bottom: 2rem;
+	}
 }
 .contact_left_head {
 	margin-bottom: 4rem;
@@ -983,6 +1124,9 @@
 	}
 }
 .contact_main_right {
+	@include bp($point_5) {
+		display: none;
+	}
 }
 .contact_map {
 	iframe {

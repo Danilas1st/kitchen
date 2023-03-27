@@ -1,4 +1,12 @@
 .header {
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+.header_scroll {
+	background-color: $dark;
+	display: flex;
+	align-items: center;
 }
 .section_in {
 }
@@ -6,7 +14,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 3rem 0 0 0;
+	padding: 3rem 0;
+	@include bp($point_2) {
+		padding: 1rem 0;
+	}
 }
 .header_logo {
 }
@@ -33,6 +44,7 @@
 .header_mobil {
 	font-size: 2.5rem;
 	color: $yellow;
+	font-family: $font_3;
 	a {
 		color: inherit;
 		@include accent-link;

@@ -263,8 +263,6 @@ function modal() {
 			let path = e.currentTarget.dataset.target
 			
 			popup.forEach((el) => {
-				isRemove(el)
-				console.log('Good')
 				if(el.dataset.id == path) {
 					isOpen(el)
 				}
@@ -289,6 +287,10 @@ function modal() {
 function isOpen(popup) {
 	document.body.classList.add('fixed')
 	popup.classList.add('active')
+
+	if(swiperProject) {
+		swiperProject.init();
+	}
 }
 
 function isRemove(popup) {
@@ -300,7 +302,7 @@ function isRemove(popup) {
 
 
 
-const swiperProject = new Swiper('.swiperPr', {
+const swiperProject = new Swiper('.swiperPopup', {
 	breakpoints: {
     320: {
       slidesPerView: 1,
@@ -324,17 +326,23 @@ const swiperProject = new Swiper('.swiperPr', {
 });
 
 
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    $('header.header').addClass('header_scroll');
+  } else {
+    $('header.header').removeClass('header_scroll');
+  }
+});
 
 
 
+// const button = document.querySelector('#show-more');
+// const section = document.querySelector('.reviews_slide_txt');
 
-
-
-
-
-
-
-
+// button.addEventListener('click', () => {
+//   section.classList.toggle('expanded');
+//   button.textContent = section.classList.contains('expanded') ? 'Показать меньше' : 'Показать больше';
+// });
 
 
 

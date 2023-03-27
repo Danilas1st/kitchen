@@ -6,10 +6,19 @@
 	display: flex;
 	align-items: center;
 	padding-top: 3rem;
+	@include bp($point_5) {
+		flex-direction: column;
+	}
 }
 .footer_copyright {
 	margin-right: 38.5rem;
 	color: $white;
+	@include bp($point_3) {
+		margin-right: 24rem;
+	}  
+	@include bp($point_5) {
+		margin: 0 0 1rem 0;
+	}
 }
 .footer_policy {
 	a {
