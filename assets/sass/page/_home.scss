@@ -26,6 +26,9 @@
 	@include bp($point_2) {
 		padding: 7rem 0 6rem 0;
 	}
+	@include bp($point_5) {
+		padding: 8rem 0 10rem 0;
+	}
 }
 .hero_main_txt {
 	max-width: 80rem;
@@ -983,22 +986,36 @@
 }
 .reviews_slide_txt {
 	margin-bottom: 2rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	&.visible {
+		max-height: 100rem;
+		-webkit-line-clamp: 1000;
+	}
 	@include bp($point_5) {
 		p {
 			font-size: 1.6rem;
 		}
 	}
 }
-.hidden-text {
-		display: none;
-}
 .reviews_btn_more {
-	button {
+	display: flex;
+	align-items: baseline;
+	cursor: pointer;
+	p {
 		font-family: $font_2;
 	}
 	svg {
 		margin-left: 1.5rem;
-		width: 1rem;
+		width: 1.3rem;
+	}
+	&.active_more_btn {
+		svg {
+			rotate: 180deg;
+		}
 	}
 }
 .contact {

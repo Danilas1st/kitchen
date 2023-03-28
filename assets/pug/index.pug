@@ -202,16 +202,17 @@ block content_block
 					.swiper-wrapper
 						-for(i = 0; i < 8; i++)
 							.swiper-slide 
-								.reviews_slide
+								.reviews_slide.showMoreBlock
 									.reviews_slide_head
 										h3 Имя Фамилия
 									.reviews_slide_date 
 										p 13.03.2023
-									.reviews_slide_txt
-										p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									.reviews_btn_more 
-										button(type="button") Показать больше
-											+icon('arrowbottom')
+									.reviews_slide_txt.showMoreTxt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+										<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									.reviews_btn_more.showMoreBtn
+										p Показать больше
+										+icon('arrowbottom')
 	section.contact 
 		.section_in 
 			.contact_main 

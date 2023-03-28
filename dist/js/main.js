@@ -20,6 +20,7 @@ $(window).on('load', function () {
 	updateSizes();
 	loadFunc();
 	modal();
+	showMoreText();
 });
 
 $(window).on('resize', function () {
@@ -336,35 +337,37 @@ $(window).scroll(function() {
 
 
 
-// const button = document.querySelector('#show-more');
-// const section = document.querySelector('.reviews_slide_txt');
-
-// button.addEventListener('click', () => {
-//   section.classList.toggle('expanded');
-//   button.textContent = section.classList.contains('expanded') ? 'Показать меньше' : 'Показать больше';
-// });
 
 
+function showMoreText() {
+  let showMoreBlock = document.querySelectorAll('.showMoreBlock')
+  Array.from(showMoreBlock).map((item) => {
+    let showMoreBtn = item.querySelector('.showMoreBtn')
+    let showMoreTxt = item.querySelector('.showMoreTxt')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    showMoreBtn.addEventListener('click', function() {
+      showMoreTxt.classList.toggle('visible')
+      if (showMoreTxt.classList.contains('visible')) {
+        this.innerHTML = `
+					<div class="reviews_btn_more showMoreBtn active_more_btn"> 
+						<p>Свернуть</p>
+						<svg class="icon icon-arrowbottom ">
+							<use xlink:href="i/sprite/sprite.svg#arrowbottom"></use>
+						</svg>
+					</div>
+        `
+      } else {
+        this.innerHTML = `
+        	<div class="reviews_btn_more showMoreBtn"> 
+						<p>Показать больше</p>
+						<svg class="icon icon-arrowbottom ">
+							<use xlink:href="i/sprite/sprite.svg#arrowbottom"></use>
+						</svg>
+					</div>
+        `;
+      }
+    })
+  })
+}
 
 
