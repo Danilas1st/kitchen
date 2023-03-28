@@ -311,6 +311,14 @@
 }
 .popup_form_head_p {
 		margin-bottom: 2rem;
+		margin-left: 4rem;
+		h2 {
+			font-family: $font_2;
+			font-size: 2.5rem;
+		}
+		@include bp($point_5) {
+			margin-left: 0;
+		}
 }
 .popup_form_txt {
 	max-width: 390rem;
