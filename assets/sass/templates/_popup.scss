@@ -318,6 +318,9 @@
 		}
 		@include bp($point_5) {
 			margin-left: 0;
+			h2 {
+				font-size: 1.6rem;
+			}
 		}
 }
 .popup_form_txt {
