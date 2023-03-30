@@ -494,9 +494,6 @@
 }
 .company_main_left {
 	margin-right: 8.3rem;
-	@include bp($point_2) {
-		text-align: center;
-	}
 }
 .company_head {
 	margin-bottom: 3rem;
