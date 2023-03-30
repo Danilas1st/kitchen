@@ -34,11 +34,16 @@
 	max-width: 80rem;
 	margin-bottom: 6rem;
 	h1 {
-		line-height: 5.3rem;
+		line-height: 6.3rem;
 		margin-bottom: 2rem;
 	}
 	p {
 		color: $white;
+	}
+	@include bp($point_2) {
+		h1{
+			line-height: 4rem;
+		}
 	}
 	@include bp($point_5) {
 		text-align: center;
@@ -362,7 +367,7 @@
 .sale_form_btn {
 	margin-right: 2.5rem;
 	width: 90%;
-	button {
+	button, input[type="submit"] {
 		width: 100%;
 		background: $yellow;
 		padding: 2.2rem 6rem;
@@ -378,13 +383,13 @@
 		margin-bottom: 2rem;
 		margin-right: 0;
 		width: 100%;
-		button {
+		button, input[type="submit"] {
 			width: 100%;
 			padding: 2.2rem 6rem;
 		}
 	}
 	@include bp($point_3) {
-		button {
+		button, input[type="submit"] {
 			padding: 2.2rem 6rem;
 		}
 	}
@@ -488,7 +493,9 @@
 	}
 }
 .company_main_left {
-	text-align: center;
+	@include bp($point_2) {
+		text-align: center;
+	}
 }
 .company_head {
 	margin-bottom: 3rem;
@@ -1151,3 +1158,5 @@
 		border-radius: 1rem;
 	}
 }
+
+.wpcf7-response-output, .wpcf7-spinner, .wpcf7-not-valid-tip {  display: none;}.wpcf7-not-valid {  border: 0.1rem solid #ff0000 !important;}.close_main p, .action_input input {  color: #000 !important;}.btn input[type=submit] {  border: none;  cursor: pointer;  width: 100%;  font-size: 20px;}

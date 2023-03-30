@@ -83,7 +83,7 @@
 }
 .popup_form_btn {
 	margin-bottom: 2rem;
-	button {
+	button, input[type="submit"] {
 		background: $yellow;
 		padding: 2.2rem 6rem;
 		width: 100%;
