@@ -259,7 +259,7 @@
 		top: 0;
 		right: 48%;
 		width: 9rem;
-		height: 61.4rem;
+		height: 61.7rem;
 		background: url('../../i/bgsale1.png') center/cover no-repeat;
 		z-index: 2;
 	}
@@ -368,6 +368,7 @@
 	margin-right: 2.5rem;
 	width: 90%;
 	button, input[type="submit"] {
+		@include app;
 		width: 100%;
 		background: $yellow;
 		padding: 2.2rem 6rem;
@@ -753,7 +754,7 @@
 		top: 0;
 		right: 47%;
 		width: 9rem;
-		height: 63.4rem;
+		height: 63.7rem;
 		rotate: 180deg;
 		background: url('../../i/bgsale1.png') center/cover no-repeat;
 		z-index: 2;
@@ -846,7 +847,8 @@
 .consultation_form_btn {
 	margin-right: 2.5rem;
 	width: 81%;
-	button {
+	button, input[type="submit"] {
+		@include app;
 		width: 100%;
 		background: $yellow;
 		padding: 2.2rem 6rem;
@@ -862,19 +864,19 @@
 		width: 100%;
 		margin-right: 0;
 		margin-bottom: 2rem;
-		button {
+		button, input[type="submit"] {
 			width: 75%;
 			padding: 2.2rem 6rem;
 		}
 	}
 	@include bp($point_3) {
-		button {
+		button, input[type="submit"] {
 			width: 65%;
 		}
 	}
 	@include bp($point_5) {
 		width: 100%;
-		button {
+		button, input[type="submit"] {
 			width: 100%;
 			padding: 2.2rem 6rem;
 		}
