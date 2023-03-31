@@ -259,7 +259,7 @@
 		top: 0;
 		right: 48%;
 		width: 9rem;
-		height: 61.7rem;
+		height: 61.4rem;
 		background: url('../../i/bgsale1.png') center/cover no-repeat;
 		z-index: 2;
 	}
@@ -495,6 +495,9 @@
 }
 .company_main_left {
 	margin-right: 8.3rem;
+	@include bp($point_5) {
+		margin-right: 0;
+	}
 }
 .company_head {
 	margin-bottom: 3rem;
@@ -754,7 +757,7 @@
 		top: 0;
 		right: 47%;
 		width: 9rem;
-		height: 63.7rem;
+		height: 63.4rem;
 		rotate: 180deg;
 		background: url('../../i/bgsale1.png') center/cover no-repeat;
 		z-index: 2;
